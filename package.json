@@ -1,0 +1,28 @@
+{
+  "name": "d3-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-html": "^0.2.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-typescript": "^6.1.0",
+    "@types/node": "^14.14.7",
+    "rollup": "^2.33.2",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.5"
+  },
+  "scripts": {
+    "build": "yarn run rollup -c",
+    "start": "yarn run rollup -c -w",
+    "reload": "yarn run livereload ./output/index.html"
+  },
+  "dependencies": {
+    "@types/d3": "^6.1.0",
+    "d3": "^6.2.0"
+  }
+}
