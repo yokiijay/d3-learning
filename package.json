@@ -9,17 +9,24 @@
     "@rollup/plugin-node-resolve": "^10.0.0",
     "@rollup/plugin-typescript": "^6.1.0",
     "@types/node": "^14.14.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^4.5.0",
     "rollup": "^2.33.2",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-serve": "^1.1.0",
     "rollup-plugin-typescript2": "^0.29.0",
+    "ts-loader": "^8.0.11",
     "tslib": "^2.0.3",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "webpack": "^5.5.0",
+    "webpack-cli": "^4.2.0"
   },
   "scripts": {
-    "build": "yarn run rollup -c",
-    "start": "yarn run rollup -c -w",
-    "reload": "yarn run livereload ./output/index.html"
+    "build:rollup": "yarn run rollup -c",
+    "start:rollup": "yarn run rollup -c -w",
+    "reload": "yarn run livereload ./output/index.html",
+    "build": "yarn run webpack",
+    "start": "yarn run webpack serve"
   },
   "dependencies": {
     "@types/d3": "^6.1.0",
