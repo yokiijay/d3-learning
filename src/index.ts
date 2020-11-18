@@ -5,4 +5,5 @@
 /** https://observablehq.com/@d3/lets-make-a-bar-chart */ 
 // import './1-bar_chart/part-1'
 // import './1-bar_chart/part-2'
-import './1-bar_chart/part-3'
+// import './1-bar_chart/part-3'
+import './1-bar_chart/part-4'
