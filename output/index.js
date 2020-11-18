@@ -2580,6 +2580,7 @@ function selection_transition(name) {
 selection.prototype.interrupt = selection_interrupt;
 selection.prototype.transition = selection_transition;
 
+var data = [40, 8, 15, 16, 23, 42];
 // create an Element
 var div = document.createElement('div');
 div.innerHTML = 'Hello, world!';
@@ -2590,3 +2591,21 @@ var d3div = create('div')
     .style('color', 'tomato')
     .node();
 console.log(d3div);
+// coding a chart
+var chartDiv = create('div')
+    .style('font', '20px sans-serif')
+    .style('text-align', 'right')
+    .style('color', 'white');
+// .style('text-align', 'right')
+// .style('color', 'white')
+chartDiv.selectAll('div')
+    .data(data)
+    .join('div')
+    .style('background', 'steelblue')
+    .style('padding', '8px')
+    .style('margin', '8px')
+    .style('border-radius', '10px')
+    .style('width', function (d) { return d * 10 + 'px'; })
+    .text(function (d) { return d; });
+document.body.appendChild(chartDiv.node());
+console.log(chartDiv);
